@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+<title>Bettina Travels Around Half the World</title>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<meta name="keywords" content="carousel, jquery, responsive, fluid, elastic, resize, thumbnail, slider" />
+<!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="../favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<script src="js/modernizr.custom.17475.js"></script>
+<script src="underscore-min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+<style>
+body {
+  margin:0px;
+  padding:0px;
+  font:normal 15px/20px Arial,sans-serif;
+  background:#fff;
+  }
+article {
+  width:33.3333%;
+  min-width:320px;
+  position:relative;
+  padding-top:40px;
+  padding-bottom:33.3333%;
+  }
+section {
+  padding:40px;
+  margin-left:40px;
+  position:relative;
+  transition:background 500ms, color 500ms;
+  -moz-transition:background 500ms, color 500ms;
+  -webkit-transition:background 500ms, color 500ms;
+  }
+section,
+section a {
+  color:#888;
+  color:rgba(128,128,128,0);
+  text-decoration:none;
+  text-shadow:rgba(64,64,64,1) 0px 0px 4px;
+  }
+section.active {
+  background:#222;
+  color:#eee;
+  }
+section.active a { color:#eee; }
+section.active small { color:#aaa; }
+h1 { font-size:2em; line-height:1em; }
+h2 { font-size:1.3333em; }
+h1,h2 { margin:0px 0px 10px; }
+p { margin:0px; }
+
+.scroll {
+  position:absolute;
+  right:0px; bottom:0px;
+  font-size:10px;
+  text-transform:uppercase;
+  padding:5px 10px;
+  }
+.colophon {
+  display:block;
+  margin-top:10px;
+  }
+
+.cover:before {
+  content:'';
+  display:block;
+  width:120px; height:120px;
+  margin:0px auto 20px;
+  }
+.cover.active:before { background:url(sprite.png) 0px -120px no-repeat; }
+
+#pane {
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  width:66.6666%;
+  }
+#map  {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  width:200%;
+  left:-50%;
+  transition:opacity 250ms;
+  -moz-transition:opacity 250ms;
+  -webkit-transition:opacity 250ms;
+  }
+/* Distinguish the "cover page" visually other sections. */
+body.section-0 #map { opacity:0.5; }
+</style>
+</head>
+
+<body class='section-0'>
+
+<div id='pane'><div id='map'></div></div>
+
+<article>
+  <section class='cover active'>
+    <h1>The Adventures of Bettina</h1>
+    <p>September 2012 to April 2013</p>
+    <small class='scroll'>Scroll ▼</small>
+  </section>
+  <section>
+    <h2>Madurai, Tamil Nadu, India</h2>
+    <p>October 2012. After landing on the edge of Kerala, I make my way to Madurai, home of one of the most famous South Indian temple and a friendly face&mdash;the aunt of a friend I recently met. She made chapati and puris for me and told me the story of her family and their old house. I went to the temple early in the morning before the sun had risen. </p>
+  </section>
+  <section>
+    <h2>ISHA, Coimbatore, Tamil Nadu, India</h2>
+    <p>Photos are not allowed at ISHA, the ashram of Sadhguru. I went to bathe with the solid mercury lingam and to make contact with what people claim is a living guru. I spent weeks here meditating, practicing yoga, and eating delicious sattvic vegan food in silence twice a day. I circled back to ISHA three times during my two months in South India.</p>
+    <small class='colophon'>
+      Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
+    </small>
+  </section>
+</article>
+
+<div id='map'></div>
+ 
+<div class="container demo-3">
+
+            <div class="main">
+
+
+				<div class="fixed-bar">
+					<!-- Elastislide Carousel -->
+					<ul id="carousel" class="elastislide-list">
+						<li><a href="#"><img src="images/small/1.jpg" alt="image01" /></a></li>
+						<li><a href="#"><img src="images/small/2.jpg" alt="image02" /></a></li>
+						<li><a href="#"><img src="images/small/3.jpg" alt="image03" /></a></li>
+						<li><a href="#"><img src="images/small/4.jpg" alt="image04" /></a></li>
+						<li><a href="#"><img src="images/small/5.jpg" alt="image05" /></a></li>
+						<li><a href="#"><img src="images/small/6.jpg" alt="image06" /></a></li>
+						<li><a href="#"><img src="images/small/7.jpg" alt="image07" /></a></li>
+						<li><a href="#"><img src="images/small/8.jpg" alt="image08" /></a></li>
+						<li><a href="#"><img src="images/small/9.jpg" alt="image09" /></a></li>
+						<li><a href="#"><img src="images/small/10.jpg" alt="image10" /></a></li>
+						<li><a href="#"><img src="images/small/11.jpg" alt="image11" /></a></li>
+						<li><a href="#"><img src="images/small/12.jpg" alt="image12" /></a></li>
+						<li><a href="#"><img src="images/small/13.jpg" alt="image13" /></a></li>
+						<li><a href="#"><img src="images/small/14.jpg" alt="image14" /></a></li>
+						<li><a href="#"><img src="images/small/15.jpg" alt="image15" /></a></li>
+						<li><a href="#"><img src="images/small/16.jpg" alt="image16" /></a></li>
+						<li><a href="#"><img src="images/small/17.jpg" alt="image17" /></a></li>
+						<li><a href="#"><img src="images/small/18.jpg" alt="image18" /></a></li>
+						<li><a href="#"><img src="images/small/19.jpg" alt="image19" /></a></li>
+						<li><a href="#"><img src="images/small/20.jpg" alt="image20" /></a></li>
+					</ul>
+					<!-- End Elastislide Carousel -->
+				</div>
+
+			</div>
+		</div>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript">
+			
+			$( '#carousel' ).elastislide( {
+				minItems : 2
+			} );
+			
+		</script>
+		<script src="story.js"></script>
+		<script src="map.js"></script>
+    </body>
+</html>
