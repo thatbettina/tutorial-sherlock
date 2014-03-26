@@ -4,6 +4,10 @@ var sections = document.getElementsByTagName('section');
 // Helper to set the active section.
 var setActive = function(index, ease) {
   _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
+  var markerName = $(sections[index]).data('marker');
+    if (markerName !== undefined) {
+      map.panTo(markers[markerName].getLatLng());
+    } 
   sections[index].className += ' active';
   return true;
 };

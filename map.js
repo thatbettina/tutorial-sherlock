@@ -15,7 +15,14 @@ map.addLayer(tiles);
 
 var markerMadurai = L.marker([9.925201, 78.119775],
   {title:'Madurai'}).addTo(map);
-
  
 var markerCoimbatore = L.marker([11.0000000, 76.9666700],
 	{title:'Coimbatore'}).addTo(map);
+
+var markers = {
+	Madurai : L.marker([9.925201, 78.119775],
+  {title:'Madurai'}),
+
+	Coimbatore: L.marker([11.0000000, 76.9666700],
+	{title:'Coimbatore'})
+}

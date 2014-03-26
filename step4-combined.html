@@ -262,7 +262,7 @@ window.onscroll = _(function() {
   // If no section was set active the user has scrolled past the last section.
   // Set the last section active.
   if (!active) setActive(sections.length - 1, true);
-}).debounce(10);
+}).debounce(10); //milliseconds
 
 // Set map to first section.
 setActive(0, false);
