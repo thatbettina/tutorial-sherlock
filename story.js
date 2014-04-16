@@ -12,7 +12,7 @@ var setActive = function(index, ease) {
   return true;
 };
 
-// Bind to scroll events to find the active section.
+// Bind to scroll events to find` the active section.
 window.onscroll = _(function() {
   // IE 8
   if (window.pageYOffset === undefined) {
