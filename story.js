@@ -7,6 +7,8 @@ var setActive = function(index, ease) {
   var markerName = $(sections[index]).data('marker');
     if (markerName !== undefined) {
       map.panTo(markers[markerName].getLatLng());
+      map.zoomIn(2);
+      map.zoomOut(2);
     } 
   sections[index].className += ' active';
   return true;
